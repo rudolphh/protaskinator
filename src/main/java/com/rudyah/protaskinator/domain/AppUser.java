@@ -14,6 +14,8 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
+
+    @Column(unique = true)
     private String username;
     private String password;
 
