@@ -12,7 +12,7 @@ import java.util.Collection;
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String name;
 
     @Column(unique = true)
@@ -21,4 +21,5 @@ public class AppUser {
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
+
 }
